@@ -1,0 +1,42 @@
+html{
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+.main-content {
+    max-width: 800px; /* Set the fixed width */
+    margin: 0 auto;   /* Horizontally center the div */
+    padding: 20px;    /* Add some padding for spacing */
+    font-family: Arial, sans-serif; /* Optional: Set a readable font */
+    line-height: 1.6; /* Optional: Improve readability */
+}
+
+#sidebar {
+    height: fit-content;
+    padding: 20px; /* Add some padding for spacing */
+    position: sticky;
+    top: 12px; /* Ensure the sticky element stays at the correct position */
+}
+
+#sidebar .position-sticky {
+    height: auto; /* Ensure the sticky content fits its height */
+}
+
+.container-fluid {
+    overflow: visible; /* Prevent parent container from interfering with sticky behavior */
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+#sidebar a {
+    border-radius: 5px; /* Ensure consistent border-radius */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Include border-radius in the transition */
+}
+
+#sidebar a.active {
+    font-weight: bold; /* Highlight the active link */
+    background-color: #007bff; /* Add background color for active link */
+    color: white; /* Ensure text is readable on the background */
+    border-radius: 5px; /* Ensure consistent border-radius */
+    padding: 5px 10px; /* Optional: Add padding for better appearance */
+}

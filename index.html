@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header style="background: url('./background.png') no-repeat center center; background-size: cover; position: relative;">
+        <div style="background-color: rgba(0, 0, 0, 0.5); color: white; text-align: center; padding: 50px 20px; position: relative;">
+            <div style="filter: blur(5px); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;"></div>
+            <div style="position: relative; z-index: 1;">
+                <h1>Data Visualization Overview</h1>
+                <p>I chose the <a href="https://www.submarinecablemap.com/" style="color: #fff; text-decoration: underline;">Submarine Cable Map</a> visualization by <a href="https://www2.telegeography.com/" style="color: #fff; text-decoration: underline;">TeleGeography</a></p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebar" class="col-md-4 col-lg-3 d-md-block bg-light sidebar" style="margin-top: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <div class="position-sticky" style="top: 12px;">
+                        <h5>Table of Contents</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#purpose">Purpose</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#data">Data</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#users">Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#questions">Questions & Insights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#design">Design Choices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#limitations">Limitations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-content col-md-9 ms-sm-auto col-lg-10 px-4">
+                    <section id="purpose">
+                        <h2>What is the purpose of this visualization?</h2>
+                        <div style="display: flex; align-items: flex-start;">
+                            <div style="flex: 1; margin-right: 10px;">
+                                <p>This is a regularly updated map of all submarine cables in the world. These cables are fiber-optic, transferring 1 terabit per second. This allows subnets in different countries to communicate with each other, enabling the internet to run globally. that make up the internet. This visualization details approximate shapes of these cables on the seafloor, simplifying their curves.</p>
+                            </div>
+                            <div style="flex: 1; text-align: center;">
+                                <img src="./cable.jpeg" alt="Submarine cables on the ocean floor" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+                                <p style="font-size: 0.9em; margin-top: 5px;">
+                                    <a href="https://www.alamy.com/transpacific-undersea-communication-cables-on-the-ocean-floor-off-the-island-of-guam-micronesia-image605807217.html?imageid=C1253063-262B-4231-9C4A-EB424A831325&p=8797&pn=1&searchId=0f88d8181349082c827c90c9c49e298d&searchtype=0" target="_blank" style="text-decoration: none; color: #007bff;">Image source: David Fleetham / Alamy Stock Photo</a>
+                                </p>
+                            </div>
+                        </div>
+                        The main purposes of this visualization are:
+                        <ul>
+                            <li>Education</li>
+                            <li>Getting people on their mailing list <a href="https://www2.telegeography.com/submarine-cable-map-trivia">here</a></li>
+                            <li>Advertising for their custom visualization service</li>
+                            <li>Promoting the geocoded data itself, purchasable <a href="https://www2.telegeography.com/license-geocoded-map-data">here</a></li>
+                            <li>Linking to the more complex version of this graphic, purchasable <a href="https://www2.telegeography.com/transport-networks">here</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="data">
+                        <h2>What is the data? How was the data captured or collected?</h2>
+                        <p>This is a properietary dataset owned by TeleGeography that you can get a license to 
+                        <a href="https://www2.telegeography.com/license-geocoded-map-data">here</a></p>
+                        <p>Possible sources of data are the two sponsors for this visualization, <a href="https://www.aquacomms.com/"><b>AQUA</b>COMMS</a> and <a href="https://center3.com/">center3</a>. Both of these companies own several submarine cables, and would know where their cables connected and lie on the seafloor.</p>
+                    </section>
+
+                    <section id="users">
+                        <h2>Who are the users that this visualization was made for?</h2>
+                        <ul>
+                            <li>Laypeople who like pretty colors and lines (me)</li>
+                            <li>Cable Enthusiaists</li>
+                            <li>Companies interested in demoing their paid version</li>
+                            <li>A datacenter planner figuring out where to build</li>
+                            <li>Someone wanting to see regular updates to newly built cable lines</li>
+                        <ul>
+                    </section>
+
+                    <section id="questions">
+                        <h2>Questions & Insights</h2>
+                        <p>No statistics besides cable information is given, but the placement of landing points (the dots in the vis) are curious. They make me wonder about why certain areas have so many while others have none. A hypothesis is the landing points are influenced by population (people who would use the internet), but without more data I can't say for certain.</p>
+                        <p>I also don't know why the cables are different colors (likely to differentiate) and why some cables split off into different colors, while still keeping the same name (<a href="https://www.submarinecablemap.com/submarine-cable/ellalink">example</a>).</p>
+                    </section>
+
+                    <section id="design">
+                        <h2>Comment on the visual and interaction design choices</h2>
+                        <p>The colors are fun, the lines are simple but convey location very well (despite not being perfectly exact).</p>
+                        <p>Trying to select a specific cable is a nightmare. The hitboxes are very small and hard to pull up. There is no way to shift+select multiple cables at once. Instead, that needs to be done the ever-present sidebar.</p>
+                    </section>
+
+                    <section id="limitations">
+                        <h2>What are the limitations of this design?</h2>
+                        <p>This design only shows the locations and landing points of submarine cables. Other information that would be cool as a non-submarine-cable-enthusiant like population or gdp stats are left out.</p>
+                        Half of the extra statistics given are not consistent or aren't specific:
+                        <ul>
+                            <li>Length is in the thousands of km (i.e. 25 000, 15 000, etc)</li>
+                            <li>Dates give a month instead of a certain day or construction time frame (i.e. 2002 April)</li>
+                            <li>Only a small number of cables have "Notes" detailing some interesting fun facts (<a href="https://www.submarinecablemap.com/submarine-cable/south-american-crossing-sac">example</a>)</li>
+                        </ul>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
