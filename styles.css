@@ -10,6 +10,7 @@ html{
 }
 
 #sidebar {
+    z-index: 1000; /* Ensure the sidebar is above other content */
     height: fit-content;
     padding: 20px; /* Add some padding for spacing */
     position: sticky;
